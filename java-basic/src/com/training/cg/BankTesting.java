@@ -6,23 +6,22 @@ import java.util.TreeSet;
 
 public class BankTesting {
 	public static void main(String args[]) {
-		int count=0;
-		CurrentAccount cur1=new CurrentAccount(1000);
+		CurrentAccount cur1=new CurrentAccount(1000,"1A04H76");
 		cur1.checkBalance();
 		cur1.deposit(2000);
 		cur1.withdraw(100);
 		cur1.checkBalance();
-		CurrentAccount cur2=new CurrentAccount(2000);
+		CurrentAccount cur2=new CurrentAccount(2000,"1A04H77");
 		cur2.checkBalance();
 		cur2.deposit(2000);
 		cur2.withdraw(100);
 		cur2.checkBalance();
-		CurrentAccount cur3=new CurrentAccount(3000);
+		CurrentAccount cur3=new CurrentAccount(3000,"1A04H78");
 		cur3.checkBalance();
 		cur3.deposit(2000);
 		cur3.withdraw(100);
 		cur3.checkBalance();
-		CurrentAccount cur4=new CurrentAccount(4000);
+		CurrentAccount cur4=new CurrentAccount(4000,"1A04H79");
 		cur4.checkBalance();
 		cur4.deposit(2000);
 		cur4.withdraw(100);
@@ -33,19 +32,16 @@ public class BankTesting {
 		curAccs.add(cur2);
 		curAccs.add(cur3);
 		curAccs.add(cur4);
-		System.out.println("Initial Balances of 4 accounts");
+		System.out.println("details of 4 accounts");
 		for(CurrentAccount c:curAccs ) {
-			count++;
-			System.out.println("Initial balance of account "+count+" is");
-			System.out.println(c.InitialBalance);
+			System.out.println("Initial balance of account "+c.AccounNumber+" is "+c.InitialBalance);
+			System.out.println("Current balance of account "+c.AccounNumber +" is "+c.checkBalance());
+			System.out.println("Current Interest rate of account "+c.AccounNumber +" is "+c.getInterest(1, 5));
+			
 		}
-		System.out.println("Current Balance of 4 accounts");
-		count=0;
-		for(CurrentAccount d:curAccs ) {
-			count++;
-			System.out.println("current balance of account "+count+" is");
-			System.out.println(d.checkBalance());
-		}
+	
+		
+		
 		
 	}
 	

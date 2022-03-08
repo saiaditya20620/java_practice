@@ -4,6 +4,7 @@ class Account_Model implements Account{
 	 double InitialBalance;
 	 double TotalBalance;
 	 double RateOfInterest;
+	 String AccounNumber;
 		@Override
 		public double deposit(double amount) {
 			TotalBalance+=amount;
@@ -28,6 +29,14 @@ class Account_Model implements Account{
 		public double checkBalance() {
 			return TotalBalance;
 		}
-		{
-}
+		
+
+		@Override
+		public double getInterest(double timeperiod, double rateofinterest) {
+			double SI=(TotalBalance*(rateofinterest)*timeperiod)/100;
+			return SI;
+		}
+
+
+
 }
