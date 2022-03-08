@@ -21,9 +21,7 @@ class Account_Model implements Account{
 			else {
 				return TotalBalance-=amount;
 				
-		}
-			
-			
+		}	
 		}
 		@Override
 		public double checkBalance() {
