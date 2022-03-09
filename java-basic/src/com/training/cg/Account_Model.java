@@ -27,7 +27,6 @@ class Account_Model implements Account{
 		public double checkBalance() {
 			return TotalBalance;
 		}
-		
 
 		@Override
 		public double getInterest(double timeperiod, double rateofinterest) {
