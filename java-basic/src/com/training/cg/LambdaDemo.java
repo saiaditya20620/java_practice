@@ -2,12 +2,15 @@ package com.training.cg;
 
 public class LambdaDemo {
 	public static void main(String args[]) {
-		demoInterface w = (a,b,c)->{
-			float d=(a+b+c)/3;
-			System.out.println("the average of three numbers is:"+(d));
-			
+		arrayLambda w = (a)->{
+			float sum=0;
+			for(int i=0;i<=a.length-1;i++){
+				sum+=a[i];		
+			}
+			System.out.println("the average :"+sum/(a.length));
 		};
-		w.Average(10,20,30);
+		int[] num= {2,3,4,5,6};
+		w.Average(num);
 	}
 
 }
